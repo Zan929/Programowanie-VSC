@@ -3,8 +3,11 @@ selector{
     właściwości : wartość
 }
 */
+*{box-sizing: ;}
 body{
     background-color: bisque;
+    margin: 0;
+
 }
 /* header który jest bezpośrednim dzieckiem body */
 body > header{
@@ -13,6 +16,10 @@ body > header{
 }
 
 /* GŁOWNA NAWIGACJA */
+nv{
+    postion:sticky;
+    top:0;
+}
 nav ul {
     border: 5px dashed red;
     /*punktowanie listy */
@@ -28,6 +35,7 @@ nav ul {
 
 /* POJEDYNCZE PRZYCISKI (HOME,PROJEKTY, KONTAKTY) */
 nav ul li{
+    
     margin: 10px;
     border: 5px solid red;
     padding: 5px 15px;
@@ -41,10 +49,25 @@ nav ul li{
     /* czas pojawiania się zmian */
     transition: .5s;
 }
-
+nav{
+    position:sticky;
+    top:0%;
+}
 /* styl elemetu po na kierowaniu nań myszką */
 nav ul li:hover{
     border-color:aqua rgb(48, 214, 229);
     background-color: rgb(245, 207, 138);
     color:black;
+}
+/*styl elementu po kliknięciu */
+nav ul li:actine{,,,}
+
+/*POPUP COOKIES */
+.cookies{
+    border:5px solid rgb(115,23,23);
+    display:flex;
+    justify-content:space-between;
+    background-color: aquamarine;
+    cursor: pointer;
+    transition: .5s;
 }
