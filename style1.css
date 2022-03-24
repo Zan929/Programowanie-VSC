@@ -3,7 +3,7 @@ selector{
     właściwości : wartość
 }
 */
-*{box-sizing: ;}
+*{box-sizing:border-box ;}
 body{
     background-color: bisque;
     margin: 0;
@@ -16,8 +16,8 @@ body > header{
 }
 
 /* GŁOWNA NAWIGACJA */
-nv{
-    postion:sticky;
+nav{
+    position:sticky;
     top:0;
 }
 nav ul {
@@ -59,8 +59,7 @@ nav ul li:hover{
     background-color: rgb(245, 207, 138);
     color:black;
 }
-/*styl elementu po kliknięciu */
-nav ul li:actine{,,,}
+
 
 /*POPUP COOKIES */
 .cookies{
@@ -68,6 +67,8 @@ nav ul li:actine{,,,}
     display:flex;
     justify-content:space-between;
     background-color: aquamarine;
-    cursor: pointer;
-    transition: .5s;
+    
 }
+
+button:hover {cursor:pointer
+        }
