@@ -1,0 +1,48 @@
+/*
+selector{
+    właściwości : wartość
+}
+*/
+body{
+    background-color: bisque;
+}
+/* header który jest bezpośrednim dzieckiem body */
+body > header{
+    border: 2px dashed red;
+    text-align: center;
+}
+
+/* GŁOWNA NAWIGACJA */
+nav ul {
+    border: 5px dashed red}
+    /*punktowanie listy */
+    list-style-type: none;
+    padding
+    margin:0
+    /* DISPLAY FLEX */
+
+    display:flex;
+    justify-content: space-evenly;}
+
+
+/* POJEDYNCZE PRZYCISKI (HOME,PROJEKTY, KONTAKTY) */
+navulli{
+    margin: 10px;
+    border: 5px solid rgb(192, 1334, 58), green, blue);
+    padding: 5px 15px;
+    background-color;
+    /* kolor tła */ 
+    color:green;
+    /* zaokrąglenie krawęzi */
+    border-radius: 15px;
+    /* wyglad kursora */
+    cursor:pointer;
+    transition: .5s
+}
+
+/* styl elemetu po na kierowaniu nań myszką */
+nav ul li:hover{
+    border-color:aqua rgb(48, 214, 229);
+    background-color: rgb(245, 207, 138);
+    color:black
+}
