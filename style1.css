@@ -5,13 +5,13 @@ selector{
 */
 *{box-sizing:border-box ;}
 body{
-    background-color: bisque;
+    background-color: rgba(12, 12, 11, 0.384);
     margin: 0;
 
 }
 /* header który jest bezpośrednim dzieckiem body */
 body > header{
-    border: 2px dashed red;
+    
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ nav{
     top:0;
 }
 nav ul {
-    border: 5px dashed red;
+    
     /*punktowanie listy */
     list-style-type: none;
     padding: 0;
@@ -37,7 +37,6 @@ nav ul {
 nav ul li{
     
     margin: 10px;
-    border: 5px solid red;
     padding: 5px 15px;
     background-color:blue;
     /* kolor tła */ 
@@ -71,4 +70,36 @@ nav ul li:hover{
 }
 
 button:hover {cursor:pointer
+        }
+        .headerText{
+           
+            padding:0 2em 1em 2em;
+        }
+    .imgField{
+        text-align: center ;
+    }
+
+
+        
+        img{
+            max-width:100%;
+            border-radius:10%;
+        }
+        @media (min-width:750px){
+            main>header,
+            main>article{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        /* Main ARTICLE (TECHNOLOGIE) */
+        .tableField{
+            display: flex;
+            justify-content: center;
+        align-items: center;
+
+        }
+        main{
+        padding:2em;    
         }
