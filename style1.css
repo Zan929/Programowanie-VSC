@@ -4,13 +4,18 @@ selector{
 }
 */
 *{box-sizing:border-box ;}
+html{
+    scroll-behavior: smooth;
+}
 body{
+    scroll-behavior: smooth;
     background-color: rgba(12, 12, 11, 0.384);
     margin: 0;
-
+/*Czcionka */
+    font-family:"Oswald";
 }
 /* header który jest bezpośrednim dzieckiem body */
-body > header{
+    #root > header{
     
     text-align: center;
 }
@@ -22,6 +27,7 @@ nav{
 }
 nav ul {
     
+    border-top: none;
     /*punktowanie listy */
     list-style-type: none;
     padding: 0;
@@ -30,17 +36,34 @@ nav ul {
 
     display:flex;
     justify-content: space-evenly;
+
+
+
+    /*  
+    flex-direction: column;
+      właściwość do "kopania" flexa 
+      zmiana row na kolumn powoduje zmianę ról między
+      justify-content a align-items
+    align-tems,
+    justify-content: 
+      flex-start - domyślna wartość
+      flex-end - wyświetl na końcu (odwrotnie do domyślnej)
+      center - wyśrodkuj
+      space-around - taka sama przestrzeń wokół każdego dziecka
+      space-evelny - taka sama przestrzeń między elementami
+      space-between - przestrzeń TYLKO pomiędzy elementami
+  */
+
 }
 
 
-/* POJEDYNCZE PRZYCISKI (HOME,PROJEKTY, KONTAKTY) */
+/* POJEDYNCZE PRZYCISKI (HOME,PROJEKTY, KONTAKTY itd.) */
 nav ul li{
     
     margin: 10px;
+    border: 2px solid rgb(115,23,23);
     padding: 5px 15px;
-    background-color:blue;
     /* kolor tła */ 
-    color:green;
     /* zaokrąglenie krawęzi */
     border-radius: 15px;
     /* wyglad kursora */
@@ -54,19 +77,32 @@ nav{
 }
 /* styl elemetu po na kierowaniu nań myszką */
 nav ul li:hover{
-    border-color:aqua rgb(48, 214, 229);
-    background-color: rgb(245, 207, 138);
-    color:black;
+    
+    background-color: rgb(255, 255, 255);
+}
+/* styl elementu po kliknięciu */
+
+nav ul li:active{
+    border-color: rgba(214, 214, 55, 0.384);
+
+    background-color: azure;
+
+    transition: none
 }
 
 
 /*POPUP COOKIES */
 .cookies{
     border:5px solid rgb(115,23,23);
+    position:fixed;
+    bottom:0;
+    width:100%;
     display:flex;
     justify-content:space-between;
     background-color: aquamarine;
-    
+    align-items: center;
+    padding: 0 5px;
+    display:none;
 }
 
 button:hover {cursor:pointer
@@ -78,28 +114,62 @@ button:hover {cursor:pointer
     .imgField{
         text-align: center ;
     }
-
-
-        
+    .headerText{
+        padding: 0 2em 1em 2em;
+    }
         img{
             max-width:100%;
             border-radius:10%;
         }
         @media (min-width:750px){
             main>header,
-            main>article{
+            main>article
+            #contact {
                 display:flex;
                 align-items: center;
                 justify-content: center;
             }
+         
         }
         /* Main ARTICLE (TECHNOLOGIE) */
         .tableField{
             display: flex;
             justify-content: center;
-        align-items: center;
+            align-items: center;
 
         }
-        main{
-        padding:2em;    
+        /* KONTAKT*/
+        #contact{
+            padding:0 2em
+            
         }
+#contact form{
+    display:flex;
+    flex-direction: column;
+    align-items:center ;
+
+}
+
+#contact form input,
+#contact form textarea{
+    background-color:rgb(220, 245, 231) ;
+    width:80%;
+    padding:.5rem;
+    outline: 0;
+    margin-bottom:.5rem;
+    border:1px solid rgb(245, 207, 138);
+    font-family:inherit;
+}
+    #contact form button{
+        background-color: beige;
+        padding:.2rem 1rem;
+        border-radius:8px;
+        outline:0;
+        border:none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+    footer{
+        padding: .5em 1.5em;
+        text-align: left;
+    }
