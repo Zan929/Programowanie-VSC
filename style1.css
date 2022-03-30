@@ -139,7 +139,8 @@ button:hover {cursor:pointer
 
         }
         /* KONTAKT*/
-        #contact{
+        
+        #contact {
             padding:0 2em
             
         }
@@ -155,6 +156,7 @@ button:hover {cursor:pointer
     background-color:rgb(220, 245, 231) ;
     width:80%;
     padding:.5rem;
+    border-radius:8px;
     outline: 0;
     margin-bottom:.5rem;
     border:1px solid rgb(245, 207, 138);
@@ -168,8 +170,53 @@ button:hover {cursor:pointer
         border:none;
         cursor: pointer;
         font-family: inherit;
+        
     }
-    footer{
-        padding: .5em 1.5em;
+    button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;}
+        
+    footer {
+        padding:.5em 1.5em;
         text-align: left;
     }
+
+
+
+    <!-- HTML !-->
+<button class="button-1" role="button">Button 1</button>
+
+/* CSS */
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
