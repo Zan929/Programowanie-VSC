@@ -185,16 +185,18 @@ button:hover {cursor:pointer
         align-items: center;
     }
     .cItem{
-        border:2px dashed red;
+        
         flex: 1;
         padding: 0% .5em;
+        
     }
     .cItem p{display: none;}
     
     .active{
-        border:5px dashed yellow;
+        
         flex:3;
-    
+        box-shadow: 0 0 15px black;
+        cursor: pointer;
     }    
     .active p{
         display: block;
